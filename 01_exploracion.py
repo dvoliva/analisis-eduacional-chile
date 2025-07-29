@@ -16,7 +16,6 @@ CHUNK_SIZE = 100000  # Número de filas por chunk
 SEPARATOR = ";"  # Separador utilizado en el archivo CSV
 
 
-
 #inicializar variables para almacenar información recolectada
 total_rows = 0
 unique_students = set()
@@ -54,14 +53,26 @@ def perfilamiento():
         print(f"Error: El archivo {FILE_PATH} no se encuentra en la ruta especificada.")
     except Exception as e:
         print(f"Error inesperado: {e}")
-
 #perfilamiento()
+
 
 #leer solo el primer chunk para analizar a modo de muestra
 print("\n-- Análisis de Muestra --")
 try: 
     muestra = pd.read_csv(FILE_PATH, sep=SEPARATOR, nrows=CHUNK_SIZE, low_memory=False, encoding='utf-8')
-    
+
+    columnas_numericas = ['PROM_GRAL', 'ASISTENCIA']
+    for col in columnas_numericas:
+        # Primero aseguramos que la columna sea tipo string
+        muestra[col] = muestra[col].astype(str)
+        # Luego realizamos la conversión a numérico
+        muestra[col] = pd.to_numeric(
+            muestra[col].str.replace(',', '.'),
+            errors='coerce'
+        )
+
+    print(muestra[columnas_numericas].dtypes)
+ 
     print('primeras filas de la muestra:')
     print(muestra.head())
 
@@ -72,6 +83,9 @@ try:
     print(muestra[['PROM_GRAL', 'ASISTENCIA']].describe())
     print(muestra['COD_DEPE2'].value_counts(normalize=True).mul(100).round(2).astype(str) + '%')
 
+    print('\nModa')
+    print(muestra['PROM_GRAL'].mode())
+
     plt.figure(figsize=(10, 6))
     muestra['PROM_GRAL'].plot(kind='hist', bins=30, edgecolor='black', title='Distribución de Promedio General')
     plt.xlabel('Promedio General')
@@ -79,7 +93,7 @@ try:
     plt.grid(True)
     plt.savefig('distribucion_promedio_general.png', dpi=300)
     print("Gráfico de distribución de promedio general guardado como 'distribucion_promedio_general.png'.")
-
+ 
 except FileNotFoundError:
     print(f"Error: El archivo {FILE_PATH} no se encuentra en la ruta especificada.")
 except Exception as e:
