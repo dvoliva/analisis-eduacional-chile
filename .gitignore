@@ -4,3 +4,5 @@ env/
 rendimiento_2024.csv
 #ignorar salida de analisis
 salida.txt
+#ignorar archivos de salida de graficos
+output/
