@@ -4,5 +4,3 @@ env/
 #ignorar fuentes de datos
 data/
 
-#ignorar archivos de salida de graficos
-output/
