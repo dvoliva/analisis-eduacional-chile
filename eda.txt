@@ -1,61 +1,76 @@
 
 -- Iniciando Perfilamiento --
 Total de filas procesadas: 3568930
-Total de estudiantes ˙nicos: 3329094
+Total de estudiantes √∫nicos: 3329094
 
---- DistribuciÛn de Columnas Clave (Total) ---
+-- Perfilamiento Finalizado --
 
-DistribuciÛn de COD_DEPE2:
-   Valor                             DescripciÛn  Frecuencia
+--- Iniciando An√°lisis de Columnas Clave ---
+
+--- Distribuci√≥n de Columnas Clave (Total) ---
+
+Distribuci√≥n de COD_DEPE2:
+   Valor                             Descripci√≥n  Frecuencia
 0      1                               Municipal     1049842
-1      5             Servicio Local de EducaciÛn      229061
+1      5             Servicio Local de Educaci√≥n      229061
 2      2                Particular Subvencionado     1930653
 3      3                       Particular Pagado      310752
-4      4  CorporaciÛn de AdministraciÛn Delegada       48622
+4      4  Corporaci√≥n de Administraci√≥n Delegada       48622
 
-DistribuciÛn de RURAL_RBD:
-   Valor DescripciÛn  Frecuencia
+Distribuci√≥n de RURAL_RBD:
+   Valor Descripci√≥n  Frecuencia
 0      0      Urbano     3302457
 1      1       Rural      266473
 
-DistribuciÛn de GEN_ALU:
-   Valor      DescripciÛn  Frecuencia
+Distribuci√≥n de GEN_ALU:
+   Valor      Descripci√≥n  Frecuencia
 0      1        Masculino     1846574
 1      2         Femenino     1722343
-2      0  Sin informaciÛn          13
+2      0  Sin informaci√≥n          13
 
-DistribuciÛn de SIT_FIN_R:
-  Valor        DescripciÛn  Frecuencia
+Distribuci√≥n de SIT_FIN_R:
+  Valor        Descripci√≥n  Frecuencia
 0     P          Promovido     3165348
 1     T         Trasladado      239619
 2     Y           Retirado       83535
 3     R          Reprobado       77238
 4        Valor desconocido        3190
 
-DistribuciÛn de COD_REG_RBD:
-    Valor                                DescripciÛn  Frecuencia
+Distribuci√≥n de COD_REG_RBD:
+    Valor                                Descripci√≥n  Frecuencia
 0       2                                Antofagasta      130490
 1      15                         Arica y Parinacota       54182
-2       1                                   Tarapac·       87731
+2       1                                   Tarapac√°       87731
 3       3                                    Atacama       64630
 4       4                                   Coquimbo      174145
-5       5                                 ValparaÌso      366038
+5       5                                 Valpara√≠so      366038
 6       6      Libertador General Bernardo O'Higgins      195340
 7       7                                      Maule      223775
-8      16                                      —uble       96398
-9       8                                     BiobÌo      308135
-10      9                               La AraucanÌa      208841
-11     14                                   Los RÌos       79527
+8      16                                      √ëuble       96398
+9       8                                     Biob√≠o      308135
+10      9                               La Araucan√≠a      208841
+11     14                                   Los R√≠os       79527
 12     10                                  Los Lagos      181592
-13     12       Magallanes y de la Ant·rtica Chilena       30510
-14     11  AysÈn del General Carlos Ib·Òez del Campo       22261
+13     12       Magallanes y de la Ant√°rtica Chilena       30510
+14     11  Ays√©n del General Carlos Ib√°√±ez del Campo       22261
 15     13                  Metropolitana de Santiago     1345335
 
---- Procesando muestra para columnas numÈricas ---
-Gr·fico de distribuciÛn para 'PROM_GRAL' guardado en: 'output\distribucion_prom_gral.png'
-Gr·fico de distribuciÛn para 'ASISTENCIA' guardado en: 'output\distribucion_asistencia.png'
+--- Procesando muestra para columnas num√©ricas ---
 
---- InformaciÛn detallada de la muestra ---
+--- Estad√≠sticas descriptivas de la muestra ---
+Gr√°fico de distribuci√≥n para 'PROM_GRAL' guardado en: 'output\distribucion_prom_gral.png'
+Gr√°fico de distribuci√≥n para 'ASISTENCIA' guardado en: 'output\distribucion_asistencia.png'
+
+--- Informaci√≥n detallada de la muestra ---
+           PROM_GRAL     ASISTENCIA
+count  500000.000000  500000.000000
+mean        5.506511      80.760446
+std         1.825374      26.825862
+min         0.000000       0.000000
+25%         5.500000      82.000000
+50%         6.100000      90.000000
+75%         6.500000      95.000000
+max         7.000000     100.000000
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 500000 entries, 0 to 499999
 Data columns (total 38 columns):
@@ -101,14 +116,3 @@ Data columns (total 38 columns):
  37  COD_MEN         500000 non-null  int64  
 dtypes: float64(1), int64(27), object(10)
 memory usage: 145.0+ MB
-
---- EstadÌsticas descriptivas de la muestra ---
-           PROM_GRAL     ASISTENCIA
-count  500000.000000  500000.000000
-mean        5.506511      80.760446
-std         1.825374      26.825862
-min         0.000000       0.000000
-25%         5.500000      82.000000
-50%         6.100000      90.000000
-75%         6.500000      95.000000
-max         7.000000     100.000000

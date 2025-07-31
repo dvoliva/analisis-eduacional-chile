@@ -10,6 +10,10 @@ el gran volumen de datos de forma eficiente en memoria.
 import pandas as pd
 import os
 import matplotlib.pyplot as plt
+import sys
+
+# Configuración de la salida estándar para manejar caracteres UTF-8
+sys.stdout.reconfigure(encoding='utf-8')
 
 FILE_PATH = "data/rendimiento_2024.csv" # Ruta del archivo CSV
 CHUNK_SIZE = 100000  # Número de filas por chunk
@@ -99,7 +103,6 @@ def perfilamiento():
         #imprimir resultados
         print(f"Total de filas procesadas: {total_rows}")
         print(f"Total de estudiantes únicos: {len(unique_students)}")    
-        print("\n-- Perfilamiento Finalizado --")
 
     except FileNotFoundError:
         print(f"Error: El archivo {FILE_PATH} no se encuentra en la ruta especificada.")
@@ -116,7 +119,6 @@ def analizar_columnas_claves():
     columnas_categoricas = ['COD_DEPE2', 'RURAL_RBD', 'GEN_ALU', 'SIT_FIN_R', 'COD_REG_RBD']
     #diccionario para guardar los conteos de cada columna
     conteos_columnas_categoricas = {col: {} for col in columnas_categoricas}
-    print("\n--- Iniciando Análisis de Columnas Clave ---")
 
     try:
         chunk_iterator = pd.read_csv(
@@ -160,7 +162,6 @@ def analizar_columnas_claves():
             )
 
         print("\n--- Estadísticas descriptivas de la muestra ---")
-        print(muestra[[]].describe())
 
         columnas_numericas = ['PROM_GRAL', 'ASISTENCIA']
         for col in columnas_numericas:
@@ -184,6 +185,7 @@ def analizar_columnas_claves():
             print(f"Gráfico de distribución para '{col}' guardado en: '{output_path}'")
 
         print("\n--- Información detallada de la muestra ---")
+        print(muestra[['PROM_GRAL', 'ASISTENCIA']].describe())
         muestra.info()
 
     except Exception as e:
