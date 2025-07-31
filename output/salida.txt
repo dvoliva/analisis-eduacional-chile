@@ -1,0 +1,48 @@
+--- Fase 1: Configuración Inicial Completa ---
+Archivo de entrada: data/rendimiento_2024.csv
+Se procesarán 9 columnas.
+Chunk 1 tiene 100,000 filas.
+Chunk 2 tiene 100,000 filas.
+Chunk 3 tiene 100,000 filas.
+Chunk 4 tiene 100,000 filas.
+Procesando chunk 5...
+Chunk 5 tiene 100,000 filas.
+Chunk 6 tiene 100,000 filas.
+Chunk 7 tiene 100,000 filas.
+Chunk 8 tiene 100,000 filas.
+Chunk 9 tiene 100,000 filas.
+Procesando chunk 10...
+Chunk 10 tiene 100,000 filas.
+Chunk 11 tiene 100,000 filas.
+Chunk 12 tiene 100,000 filas.
+Chunk 13 tiene 100,000 filas.
+Chunk 14 tiene 100,000 filas.
+Procesando chunk 15...
+Chunk 15 tiene 100,000 filas.
+Chunk 16 tiene 100,000 filas.
+Chunk 17 tiene 100,000 filas.
+Chunk 18 tiene 100,000 filas.
+Chunk 19 tiene 100,000 filas.
+Procesando chunk 20...
+Chunk 20 tiene 100,000 filas.
+Chunk 21 tiene 100,000 filas.
+Chunk 22 tiene 100,000 filas.
+Chunk 23 tiene 100,000 filas.
+Chunk 24 tiene 100,000 filas.
+Procesando chunk 25...
+Chunk 25 tiene 100,000 filas.
+Chunk 26 tiene 100,000 filas.
+Chunk 27 tiene 100,000 filas.
+Chunk 28 tiene 100,000 filas.
+Chunk 29 tiene 100,000 filas.
+Procesando chunk 30...
+Chunk 30 tiene 100,000 filas.
+Chunk 31 tiene 100,000 filas.
+Chunk 32 tiene 100,000 filas.
+Chunk 33 tiene 100,000 filas.
+Chunk 34 tiene 100,000 filas.
+Procesando chunk 35...
+Chunk 35 tiene 100,000 filas.
+Chunk 36 tiene 68,930 filas.
+proceso completado en 15.71 segundos!
+archivo limpio con 3,242,586 filas en: data/rendimiento_limpio_2024.csv
