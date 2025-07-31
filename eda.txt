@@ -1,0 +1,114 @@
+
+-- Iniciando Perfilamiento --
+Total de filas procesadas: 3568930
+Total de estudiantes únicos: 3329094
+
+--- Distribución de Columnas Clave (Total) ---
+
+Distribución de COD_DEPE2:
+   Valor                             Descripción  Frecuencia
+0      1                               Municipal     1049842
+1      5             Servicio Local de Educación      229061
+2      2                Particular Subvencionado     1930653
+3      3                       Particular Pagado      310752
+4      4  Corporación de Administración Delegada       48622
+
+Distribución de RURAL_RBD:
+   Valor Descripción  Frecuencia
+0      0      Urbano     3302457
+1      1       Rural      266473
+
+Distribución de GEN_ALU:
+   Valor      Descripción  Frecuencia
+0      1        Masculino     1846574
+1      2         Femenino     1722343
+2      0  Sin información          13
+
+Distribución de SIT_FIN_R:
+  Valor        Descripción  Frecuencia
+0     P          Promovido     3165348
+1     T         Trasladado      239619
+2     Y           Retirado       83535
+3     R          Reprobado       77238
+4        Valor desconocido        3190
+
+Distribución de COD_REG_RBD:
+    Valor                                Descripción  Frecuencia
+0       2                                Antofagasta      130490
+1      15                         Arica y Parinacota       54182
+2       1                                   Tarapacá       87731
+3       3                                    Atacama       64630
+4       4                                   Coquimbo      174145
+5       5                                 Valparaíso      366038
+6       6      Libertador General Bernardo O'Higgins      195340
+7       7                                      Maule      223775
+8      16                                      Ñuble       96398
+9       8                                     Biobío      308135
+10      9                               La Araucanía      208841
+11     14                                   Los Ríos       79527
+12     10                                  Los Lagos      181592
+13     12       Magallanes y de la Antártica Chilena       30510
+14     11  Aysén del General Carlos Ibáñez del Campo       22261
+15     13                  Metropolitana de Santiago     1345335
+
+--- Procesando muestra para columnas numéricas ---
+Gráfico de distribución para 'PROM_GRAL' guardado en: 'output\distribucion_prom_gral.png'
+Gráfico de distribución para 'ASISTENCIA' guardado en: 'output\distribucion_asistencia.png'
+
+--- Información detallada de la muestra ---
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 500000 entries, 0 to 499999
+Data columns (total 38 columns):
+ #   Column          Non-Null Count   Dtype  
+---  ------          --------------   -----  
+ 0   AGNO            500000 non-null  int64  
+ 1   RBD             500000 non-null  int64  
+ 2   DGV_RBD         500000 non-null  int64  
+ 3   NOM_RBD         500000 non-null  object 
+ 4   COD_REG_RBD     500000 non-null  int64  
+ 5   NOM_REG_RBD_A   500000 non-null  object 
+ 6   COD_PRO_RBD     500000 non-null  int64  
+ 7   COD_COM_RBD     500000 non-null  int64  
+ 8   NOM_COM_RBD     500000 non-null  object 
+ 9   COD_DEPROV_RBD  500000 non-null  int64  
+ 10  NOM_DEPROV_RBD  500000 non-null  object 
+ 11  COD_DEPE        500000 non-null  int64  
+ 12  COD_DEPE2       500000 non-null  int64  
+ 13  RURAL_RBD       500000 non-null  int64  
+ 14  ESTADO_ESTAB    500000 non-null  int64  
+ 15  NOMBRE_SLEP     500000 non-null  object 
+ 16  COD_ENSE        500000 non-null  int64  
+ 17  COD_ENSE2       500000 non-null  int64  
+ 18  COD_GRADO       500000 non-null  int64  
+ 19  LET_CUR         500000 non-null  object 
+ 20  COD_JOR         500000 non-null  int64  
+ 21  COD_TIP_CUR     500000 non-null  int64  
+ 22  COD_DES_CUR     500000 non-null  int64  
+ 23  MRUN            500000 non-null  int64  
+ 24  GEN_ALU         500000 non-null  int64  
+ 25  FEC_NAC_ALU     500000 non-null  int64  
+ 26  EDAD_ALU        500000 non-null  object 
+ 27  COD_REG_ALU     500000 non-null  int64  
+ 28  COD_COM_ALU     500000 non-null  int64  
+ 29  NOM_COM_ALU     500000 non-null  object 
+ 30  COD_RAMA        500000 non-null  int64  
+ 31  COD_SEC         500000 non-null  int64  
+ 32  COD_ESPE        500000 non-null  int64  
+ 33  PROM_GRAL       500000 non-null  float64
+ 34  ASISTENCIA      500000 non-null  int64  
+ 35  SIT_FIN         500000 non-null  object 
+ 36  SIT_FIN_R       500000 non-null  object 
+ 37  COD_MEN         500000 non-null  int64  
+dtypes: float64(1), int64(27), object(10)
+memory usage: 145.0+ MB
+
+--- Estadísticas descriptivas de la muestra ---
+           PROM_GRAL     ASISTENCIA
+count  500000.000000  500000.000000
+mean        5.506511      80.760446
+std         1.825374      26.825862
+min         0.000000       0.000000
+25%         5.500000      82.000000
+50%         6.100000      90.000000
+75%         6.500000      95.000000
+max         7.000000     100.000000

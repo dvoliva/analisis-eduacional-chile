@@ -1,8 +1,8 @@
 #ignorar venv
 env/
-#ignorar csv fuente
-rendimiento_2024.csv
-#ignorar salida de analisis
-salida.txt
+
+#ignorar fuentes de datos
+data/
+
 #ignorar archivos de salida de graficos
 output/
