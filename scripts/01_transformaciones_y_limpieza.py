@@ -101,11 +101,13 @@ try:
         chunk_filtrado = chunk_filtrado[chunk_filtrado['SIT_FIN_R'].isin(['P', 'R'])].copy()
         # print(f"Después filtro SIT_FIN_R: {len(chunk_filtrado)} filas")
 
-
         #si el chunk está vacío después de los filtros, continuar con el siguiente
         if chunk_filtrado.empty:
             continue
         
+        chunk_filtrado['PROM_GRAL'] = chunk_filtrado['PROM_GRAL'].astype(str).str.replace(',', '.')
+        chunk_filtrado['ASISTENCIA'] = chunk_filtrado['ASISTENCIA'].astype(str).str.replace(',', '.')
+
         #convertir PROM_GRAL a numérico
         chunk_filtrado['PROM_GRAL'] = pd.to_numeric(
             chunk_filtrado['PROM_GRAL'],
@@ -164,6 +166,5 @@ try:
         print("No se encontraron datos válidos después del filtrado.")
     
 
-    
 except Exception as e:
     print(f"Error inesperado: {e}")
