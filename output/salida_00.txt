@@ -3,10 +3,6 @@
 Total de filas procesadas: 3568930
 Total de estudiantes únicos: 3329094
 
--- Perfilamiento Finalizado --
-
---- Iniciando Análisis de Columnas Clave ---
-
 --- Distribución de Columnas Clave (Total) ---
 
 Distribución de COD_DEPE2:

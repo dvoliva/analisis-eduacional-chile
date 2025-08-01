@@ -1,0 +1,67 @@
+Datos cargados: 3076190 filas, 8 columnas
+Filas con PROM_GRAL faltante (NaN): 0
+Brechas por tipo de establecimiento:
+                             mean    count
+TIPO_ESTABLECIMIENTO                      
+Particular Pagado            6.37   300629
+Particular Subvencionado     6.00  1606172
+Municipal                    5.97   926323
+Servicio Local de Educación  5.96   200097
+Corp. de Adm. Delegada       5.64    42969
+
+Gráfico guardado en: output\brecha_por_dependencia.png
+
+--- Analizando Brecha por Zona Geográfica (Urbano/Rural) ---
+        mean    count
+ZONA                 
+Rural   6.11   241944
+Urbano  6.01  2834246
+
+--- Analizando Brecha por Región ---
+                    mean    count
+REGION                           
+Magallanes          6.13    26948
+Arica y Parinacota  6.12    45640
+Ñuble               6.10    83884
+Biobío              6.08   265844
+Los Ríos            6.06    69405
+Valparaíso          6.04   311753
+Maule               6.04   195037
+Antofagasta         6.03   116650
+Coquimbo            6.03   150343
+O'Higgins           6.02   168995
+Atacama             6.02    57327
+Tarapacá            6.01    73424
+La Araucanía        6.00   182635
+Los Lagos           5.99   156391
+Metropolitana       5.99  1152293
+Aysén               5.95    19621
+Gráfico guardado en: output\brecha_por_region.png
+
+--- Analizando Brecha por Género ---
+Total de estudiantes para análisis: 3,076,190
+Estudiantes con PROM_GRAL válido: 3,076,190
+
+📊 Estadísticas detalladas por género:
+Género     | Promedio | Estudiantes | Desv.Est | Mediana
+----------------------------------------------------------
+Femenino   |   6.10 |  1,498,340 |   0.63 |   6.20
+Masculino  |   5.94 |  1,577,842 |   0.69 |   6.00
+
+🔍 Análisis de brecha:
+Diferencia entre géneros: 0.16 puntos
+Género con mejor rendimiento: Femenino
+Porcentaje de diferencia: 2.7%
+
+📈 Distribución por percentiles:
+           P25  P50 (Mediana)  P75
+GENERO                            
+Femenino   5.8            6.2  6.6
+Masculino  5.5            6.0  6.5
+
+💾 Gráfico guardado en: output\brecha_por_genero.png
+
+📋 Resumen del análisis:
+Total de estudiantes analizados: 3,076,182
+Representatividad: 100.0% de los datos cargados
+La brecha de género es de 0.16 puntos, favorable al género Femenino

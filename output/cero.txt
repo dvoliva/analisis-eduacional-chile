@@ -1,6 +1,0 @@
-Total de registros con Promedio General = 0: 145,683
-
-Distribución de Tipo de Enseñanza para registros con Promedio Cero:
-TIPO_ENSENANZA
-Especial    145683
-Name: count, dtype: int64

@@ -44,5 +44,5 @@ Chunk 34 tiene 100,000 filas.
 Procesando chunk 35...
 Chunk 35 tiene 100,000 filas.
 Chunk 36 tiene 68,930 filas.
-proceso completado en 15.71 segundos!
+proceso completado en 23.35 segundos!
 archivo limpio con 3,242,586 filas en: data/rendimiento_limpio_2024.csv
